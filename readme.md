@@ -33,7 +33,7 @@ megalog.error("`grunt kill-website` has been removed.");
 
 ### Options
 
-You can override the defaults with an optional parametres object, as a second argument:
+You can override the defaults with an optional parameters object, as a second argument:
 - `heading` adds or overides the heading
 
 Megalog uses [chalk](https://github.com/sindresorhus/chalk), so all colour settings can be overridden using the [chalk presets](https://github.com/sindresorhus/chalk#colors)
