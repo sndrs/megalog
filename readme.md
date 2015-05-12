@@ -23,7 +23,7 @@ megalog.warn("You should check something…");
 megalog.error("Something has gone wrong.");
 ```
 
-Markdown-style inline code snippets will be hightlighted (see image above):
+Markdown-style inline code snippets will be hightlighted:
 
 ```js
 megalog.error("`grunt kill-website` has been removed.");
