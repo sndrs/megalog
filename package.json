@@ -1,6 +1,6 @@
 {
   "name": "megalog",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Output messages to the console in big blocks; for when you really need something to be noticed.",
   "main": "megalog.js",
   "dependencies": {
