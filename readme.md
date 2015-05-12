@@ -1,6 +1,8 @@
 # megalog
 
-Outputs big fat messages to the console, for when you really need something to be noticed.
+Output messages to the console in big blocks; for when you really need something to be noticed.
+
+![examples](megalogs.png)
 
 ## Install
 
@@ -19,4 +21,11 @@ megalog.log("Process complete");
 megalog.info("Everthing is looking good.");
 megalog.warn("You should check something…");
 megalog.error("Something has gone wrong.");
+```
+
+## Build
+
+```
+$ npm install
+$ npm run build
 ```
