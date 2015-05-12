@@ -2,7 +2,7 @@
 
 Output messages to the console in big blocks; for when you really need something to be noticed.
 
-![examples](megalogs.png)
+![examples](examples/megalogs.png)
 
 ## Install
 
@@ -29,7 +29,7 @@ Markdown-style inline code snippets will be hightlighted (see image above):
 megalog.error("`grunt kill-website` has been removed.");
 ```
 
-![examples](megalog-inlinecode.png)
+![example with inline code](examples/megalog-inlinecode.png)
 
 ### Options
 
@@ -45,7 +45,7 @@ Megalog uses [chalk](https://github.com/sindresorhus/chalk), so all colour setti
 megalog.log("Mmmmm nice: `rm -rf`", {colour: 'yellow', bgColour: 'green', codeColour: 'magenta'});
 ```
 
-![examples](megalog-colours.png)
+![example with overides](examples/megalog-colours.png)
 
 ## Build
 
