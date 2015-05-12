@@ -2,15 +2,14 @@ import _ from 'lodash';
 import chalk from 'chalk';
 import size from 'window-size';
 
-const maxWidth = 44;
-const minPadding = 3;
-const minMargin = 3;
+const padding = 3;
+const margin = 3;
 
 class MegaLog {
 
-    constructor (message = 'hello', {width = 40, heading = false, bgColour = 'white', colour = 'black', codeColour = 'red'} = {}) {
-        this.margin = minMargin;
-        this.padding = minPadding;
+    constructor (message = 'hello', {heading = false, bgColour = 'white', colour = 'black', codeColour = 'red'} = {}) {
+        this.margin = margin;
+        this.padding = padding;
         this.width = size.width - (this.padding * 2) - (this.margin * 2);
 
         this.bgColour = `bg${_.capitalize(bgColour.toLowerCase())}`;
@@ -29,10 +28,8 @@ class MegaLog {
             _.repeat(' ', this.margin)
             + chalk[this.bgColour][this.color](
                 _.repeat(' ', this.padding)
-                // + _.repeat(' ', Math.floor(space / 2))
                 + line
                 + _.repeat(' ', space)
-                // + _.repeat(' ', Math.ceil(space / 2))
                 + _.repeat(' ', this.padding)
             )
             + '\n'

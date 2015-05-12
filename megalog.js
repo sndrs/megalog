@@ -22,9 +22,8 @@ var _windowSize = require('window-size');
 
 var _windowSize2 = _interopRequireDefault(_windowSize);
 
-var maxWidth = 44;
-var minPadding = 3;
-var minMargin = 3;
+var padding = 3;
+var margin = 3;
 
 var MegaLog = (function () {
     function MegaLog() {
@@ -32,8 +31,6 @@ var MegaLog = (function () {
 
         var _ref = arguments[1] === undefined ? {} : arguments[1];
 
-        var _ref$width = _ref.width;
-        var width = _ref$width === undefined ? 40 : _ref$width;
         var _ref$heading = _ref.heading;
         var heading = _ref$heading === undefined ? false : _ref$heading;
         var _ref$bgColour = _ref.bgColour;
@@ -45,8 +42,8 @@ var MegaLog = (function () {
 
         _classCallCheck(this, MegaLog);
 
-        this.margin = minMargin;
-        this.padding = minPadding;
+        this.margin = margin;
+        this.padding = padding;
         this.width = _windowSize2['default'].width - this.padding * 2 - this.margin * 2;
 
         this.bgColour = 'bg' + _lodash2['default'].capitalize(bgColour.toLowerCase());
@@ -63,11 +60,7 @@ var MegaLog = (function () {
         key: 'formatLine',
         value: function formatLine(line) {
             var space = this.width - _chalk2['default'].stripColor(line).length;
-            return _lodash2['default'].repeat(' ', this.margin) + _chalk2['default'][this.bgColour][this.color](_lodash2['default'].repeat(' ', this.padding)
-            // + _.repeat(' ', Math.floor(space / 2))
-             + line + _lodash2['default'].repeat(' ', space)
-            // + _.repeat(' ', Math.ceil(space / 2))
-             + _lodash2['default'].repeat(' ', this.padding)) + '\n';
+            return _lodash2['default'].repeat(' ', this.margin) + _chalk2['default'][this.bgColour][this.color](_lodash2['default'].repeat(' ', this.padding) + line + _lodash2['default'].repeat(' ', space) + _lodash2['default'].repeat(' ', this.padding)) + '\n';
         }
     }, {
         key: 'colouriseCode',
