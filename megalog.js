@@ -26,8 +26,8 @@ var maxWidth = 44;
 var minPadding = 3;
 var minMargin = 3;
 
-var BigLog = (function () {
-    function BigLog() {
+var MegaLog = (function () {
+    function MegaLog() {
         var message = arguments[0] === undefined ? 'hello' : arguments[0];
 
         var _ref = arguments[1] === undefined ? {} : arguments[1];
@@ -43,7 +43,7 @@ var BigLog = (function () {
         var _ref$codeColour = _ref.codeColour;
         var codeColour = _ref$codeColour === undefined ? 'red' : _ref$codeColour;
 
-        _classCallCheck(this, BigLog);
+        _classCallCheck(this, MegaLog);
 
         this.margin = minMargin;
         this.padding = minPadding;
@@ -59,7 +59,7 @@ var BigLog = (function () {
         this.bar = this.formatLine(_lodash2['default'].repeat(' ', this.width));
     }
 
-    _createClass(BigLog, [{
+    _createClass(MegaLog, [{
         key: 'formatLine',
         value: function formatLine(line) {
             var space = this.width - _chalk2['default'].stripColor(line).length;
@@ -112,12 +112,12 @@ var BigLog = (function () {
         }
     }]);
 
-    return BigLog;
+    return MegaLog;
 })();
 
 exports['default'] = {
     log: function log(message, options) {
-        console.log(new BigLog(message, options).formattedBlock());
+        console.log(new MegaLog(message, options).formattedBlock());
     },
     info: function info(message) {
         var options = arguments[1] === undefined ? {} : arguments[1];
@@ -128,7 +128,7 @@ exports['default'] = {
             colour: 'white',
             codeColour: 'black'
         }, options);
-        console.info(new BigLog(message, options).formattedBlock());
+        console.info(new MegaLog(message, options).formattedBlock());
     },
     warn: function warn(message) {
         var options = arguments[1] === undefined ? {} : arguments[1];
@@ -139,7 +139,7 @@ exports['default'] = {
             colour: 'white',
             codeColour: 'black'
         }, options);
-        console.warn(new BigLog(message, options).formattedBlock());
+        console.warn(new MegaLog(message, options).formattedBlock());
     },
     error: function error(message) {
         var options = arguments[1] === undefined ? {} : arguments[1];
@@ -150,11 +150,7 @@ exports['default'] = {
             colour: 'white',
             codeColour: 'black'
         }, options);
-        console.warn(new BigLog(message, options).formattedBlock());
-    },
-    test: function test(message) {
-        var options = arguments[1] === undefined ? {} : arguments[1];
-        return new BigLog(message, options);
+        console.warn(new MegaLog(message, options).formattedBlock());
     }
 };
 module.exports = exports['default'];
