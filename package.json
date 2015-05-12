@@ -1,7 +1,7 @@
 {
   "name": "megalog",
   "version": "1.0.0",
-  "description": "Outputs messages to the console in big blocks, to make them really pop…",
+  "description": "Output messages to the console in big blocks; for when you really need something to be noticed.",
   "main": "megalog.js",
   "dependencies": {
     "chalk": "^1.0.0",
