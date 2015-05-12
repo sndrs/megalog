@@ -1,6 +1,6 @@
 {
   "name": "megalog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Output messages to the console in big blocks; for when you really need something to be noticed.",
   "main": "megalog.js",
   "dependencies": {
@@ -21,5 +21,13 @@
     "log"
   ],
   "author": "Alex Sanders",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sndrs/megalog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sndrs/megalog/issues"
+  },
+  "homepage": "https://github.com/sndrs/megalog"
 }
