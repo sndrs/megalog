@@ -36,13 +36,17 @@ megalog.error("`grunt kill-website` has been removed.");
 You can override the defaults with an optional parameters object, as a second argument:
 - `heading` adds or overides the heading
 
-Megalog uses [chalk](https://github.com/sindresorhus/chalk), so all colour settings can be overridden using the [chalk presets](https://github.com/sindresorhus/chalk#colors)
+Megalog uses [chalk](https://github.com/sindresorhus/chalk), override colour settings using the [chalk presets](https://github.com/sindresorhus/chalk#colors):
 - `colour` text colour
 - `bgColour` background colour
 - `codeColour` highlight colour for inline code
 
 ```js
-megalog.log("Mmmmm nice: `rm -rf`", {colour: 'yellow', bgColour: 'green', codeColour: 'magenta'});
+megalog.log("Mmmmm nice: `rm -rf`", {
+    colour: 'yellow',
+    bgColour: 'green',
+    codeColour: 'magenta'
+});
 ```
 
 ![example with overides](examples/megalog-colours.png)
