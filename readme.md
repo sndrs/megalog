@@ -15,7 +15,7 @@ $ npm install --save megalog
 Use in place of `console` in node/io.js, in the four following scenarios:
 
 ```js
-var megalog = require('./megalog');
+var megalog = require('megalog');
 
 megalog.log("Process complete");
 megalog.info("Everthing is looking good.");
