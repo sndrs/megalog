@@ -1,0 +1,25 @@
+{
+  "name": "megalog",
+  "version": "1.0.0",
+  "description": "Outputs messages to the console in big blocks, to make them really pop…",
+  "main": "megalog.js",
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "lodash": "^3.8.0",
+    "window-size": "^0.1.0"
+  },
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "babel": "^5.2.17"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/megalog.js --out-file megalog.js "
+  },
+  "keywords": [
+    "console",
+    "log"
+  ],
+  "author": "Alex Sanders",
+  "license": "ISC"
+}
