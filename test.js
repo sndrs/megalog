@@ -1,17 +1,25 @@
 var megalog = require('./megalog');
 
-megalog.log("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.");
-megalog.log("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.", {heading: 'hello'});
-megalog.log("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.", {colour: 'yellow', bgColour: 'green', codeColour: 'grey'});
+megalog.log("This is a megalog.log.");
+megalog.log("This is a megalog.log `with code`.");
+megalog.log("This is a megalog.log with a heading of 'Hello'.", {heading: 'Hello'});
+megalog.log("This is a megalog.log in red, on blue, with `grey code`.", {colour: 'red', bgColour: 'blue', codeColour: 'grey'});
+megalog.log("This is a megalog.log in red, on blue, with `grey code`, spelt the American way.", {color: 'red', bgColor: 'blue', codeColor: 'grey'});
 
-megalog.info("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.");
-megalog.info("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.", {heading: 'hello'});
-megalog.info("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.", {colour: 'yellow', bgColour: 'green', codeColour: 'grey'});
+megalog.info("This is a megalog.info.");
+megalog.info("This is a megalog.info `with code`.");
+megalog.info("This is a megalog.info with a heading of 'Hello'.", {heading: 'Hello'});
+megalog.info("This is a megalog.info in red, on blue, with `grey code`.", {colour: 'red', bgColour: 'blue', codeColour: 'grey'});
+megalog.info("This is a megalog.info in red, on blue, with `grey code`, spelt the American way.", {color: 'red', bgColor: 'blue', codeColor: 'grey'});
 
-megalog.warn("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.");
-megalog.warn("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.", {heading: 'hello'});
-megalog.warn("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.", {colour: 'yellow', bgColour: 'green', codeColour: 'grey'});
+megalog.warn("This is a megalog.warn.");
+megalog.warn("This is a megalog.warn `with code`.");
+megalog.warn("This is a megalog.warn with a heading of 'Hello'.", {heading: 'Hello'});
+megalog.warn("This is a megalog.warn in red, on blue, with `grey code`.", {colour: 'red', bgColour: 'blue', codeColour: 'grey'});
+megalog.warn("This is a megalog.warn in red, on blue, with `grey code`, spelt the American way.", {color: 'red', bgColor: 'blue', codeColor: 'grey'});
 
-megalog.error("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.");
-megalog.error("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.", {heading: 'hello'});
-megalog.error("Lorem ipsum dolor sit amet, `consectetur adipisicing` elit. Non totam asperiores.", {colour: 'yellow', bgColour: 'green', codeColour: 'grey'});
+megalog.error("This is a megalog.error.");
+megalog.error("This is a megalog.error `with code`.");
+megalog.error("This is a megalog.error with a heading of 'Hello'.", {heading: 'Hello'});
+megalog.error("This is a megalog.error in red, on blue, with `grey code`.", {colour: 'red', bgColour: 'blue', codeColour: 'grey'});
+megalog.error("This is a megalog.error in red, on blue, with `grey code`, spelt the American way.", {color: 'red', bgColor: 'blue', codeColor: 'grey'});

@@ -7,14 +7,26 @@ const margin = 3;
 
 class MegaLog {
 
-    constructor (message = 'hello', {heading = false, bgColour = 'white', colour = 'black', codeColour = 'red'} = {}) {
+    constructor (message = 'hello', {
+        heading = false,
+
+        colour = 'black',
+        bgColour = 'white',
+        codeColour = 'red',
+
+        // support american spelling
+        color = null,
+        bgColor = null,
+        codeColor = null
+
+    } = {}) {
         this.margin = margin;
         this.padding = padding;
         this.width = size.width - (this.padding * 2) - (this.margin * 2);
 
-        this.bgColour = `bg${_.capitalize(bgColour.toLowerCase())}`;
-        this.color = colour;
-        this.codeColour = codeColour;
+        this.bgColour = `bg${_.capitalize((bgColor || bgColour).toLowerCase())}`;
+        this.color = color || colour;
+        this.codeColour = codeColor || codeColour;
 
         this.heading = heading;
         this.message = this.colouriseCode(message);

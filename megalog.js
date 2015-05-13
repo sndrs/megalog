@@ -33,12 +33,18 @@ var MegaLog = (function () {
 
         var _ref$heading = _ref.heading;
         var heading = _ref$heading === undefined ? false : _ref$heading;
-        var _ref$bgColour = _ref.bgColour;
-        var bgColour = _ref$bgColour === undefined ? 'white' : _ref$bgColour;
         var _ref$colour = _ref.colour;
         var colour = _ref$colour === undefined ? 'black' : _ref$colour;
+        var _ref$bgColour = _ref.bgColour;
+        var bgColour = _ref$bgColour === undefined ? 'white' : _ref$bgColour;
         var _ref$codeColour = _ref.codeColour;
         var codeColour = _ref$codeColour === undefined ? 'red' : _ref$codeColour;
+        var _ref$color = _ref.color;
+        var color = _ref$color === undefined ? null : _ref$color;
+        var _ref$bgColor = _ref.bgColor;
+        var bgColor = _ref$bgColor === undefined ? null : _ref$bgColor;
+        var _ref$codeColor = _ref.codeColor;
+        var codeColor = _ref$codeColor === undefined ? null : _ref$codeColor;
 
         _classCallCheck(this, MegaLog);
 
@@ -46,9 +52,9 @@ var MegaLog = (function () {
         this.padding = padding;
         this.width = _windowSize2['default'].width - this.padding * 2 - this.margin * 2;
 
-        this.bgColour = 'bg' + _lodash2['default'].capitalize(bgColour.toLowerCase());
-        this.color = colour;
-        this.codeColour = codeColour;
+        this.bgColour = 'bg' + _lodash2['default'].capitalize((bgColor || bgColour).toLowerCase());
+        this.color = color || colour;
+        this.codeColour = codeColor || codeColour;
 
         this.heading = heading;
         this.message = this.colouriseCode(message);
@@ -147,3 +153,5 @@ exports['default'] = {
     }
 };
 module.exports = exports['default'];
+
+// support american spelling

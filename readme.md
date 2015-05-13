@@ -1,6 +1,6 @@
-# megalog
+# MEGALOG
 
-Output messages to the console in big blocks; for when you really need something to be noticed.
+Output messages to the console in big blocks; for when you really need to tell someone something.
 
 ![examples](https://raw.githubusercontent.com/sndrs/megalog/master/examples/megalogs.png)
 
@@ -36,10 +36,10 @@ megalog.error("`grunt kill-website` has been removed.");
 You can override the defaults with an optional parameters object, as a second argument:
 - `heading` adds or overides the heading
 
-Megalog uses [chalk](https://github.com/sindresorhus/chalk), override colour settings using the [chalk presets](https://github.com/sindresorhus/chalk#colors):
-- `colour` text colour
-- `bgColour` background colour
-- `codeColour` highlight colour for inline code
+MEGALOG uses [chalk](https://github.com/sindresorhus/chalk). You can override the colour presets by passing in other [chalk colours](https://github.com/sindresorhus/chalk#colors):
+- `colour`/`color` text colour
+- `bgColour`/`bgColor` background colour
+- `codeColour`/`codeColor` highlight colour for inline code
 
 ```js
 megalog.log("Mmmmm nice: `rm -rf`", {
