@@ -12,9 +12,9 @@
     "babel": "^5.2.17"
   },
   "scripts": {
-    "test": "node test.js",
-    "build": "babel src/megalog.js --out-file megalog.js "
     "test": "node test/test.js",
+    "compile": "babel src/megalog.js --out-file megalog.js ",
+    "prepublish": "npm run compile"
   },
   "keywords": [
     "console",
