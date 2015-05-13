@@ -7,19 +7,20 @@ const margin = 3;
 
 class MegaLog {
 
-    constructor (message = 'hello', {
-        heading = false,
+    constructor (
+        message = 'hello', {
+            heading = false,
 
-        colour = 'black',
-        bgColour = 'white',
-        codeColour = 'red',
+            colour = 'black',
+            bgColour = 'white',
+            codeColour = 'red',
 
-        // support american spelling
-        color = null,
-        bgColor = null,
-        codeColor = null
-
-    } = {}) {
+            // support american spelling
+            color = null,
+            bgColor = null,
+            codeColor = null
+        } = {}
+    ) {
         this.margin = margin;
         this.padding = padding;
         this.width = size.width - (this.padding * 2) - (this.margin * 2);
