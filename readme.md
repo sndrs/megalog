@@ -12,6 +12,14 @@ $ npm install --save megalog
 
 ## Usage
 
+### API
+
+```js
+megalog.method(string, [options]);
+```
+
+### Examples
+
 Use in place of `console` in node/io.js, in the four following scenarios:
 
 ```js
