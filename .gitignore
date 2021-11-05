@@ -1,2 +1,3 @@
 node_modules
 /megalog.js
+.DS_Store
