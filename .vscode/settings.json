@@ -1,0 +1,7 @@
+{
+  "cSpell.words": ["megalog"],
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnType": true
+}

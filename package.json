@@ -1,21 +1,7 @@
 {
   "name": "megalog",
-  "version": "0.1.0",
+  "version": "2.0.0-beta",
   "description": "Output messages to the console in big blocks; for when you really need something to be noticed.",
-  "main": "megalog.js",
-  "dependencies": {
-    "chalk": "^1.0.0",
-    "lodash": "^3.8.0",
-    "window-size": "^0.1.0"
-  },
-  "devDependencies": {
-    "babel": "^5.2.17"
-  },
-  "scripts": {
-    "test": "node test/test.js",
-    "compile": "babel src/megalog.js --out-file megalog.js ",
-    "prepublish": "npm run compile"
-  },
   "keywords": [
     "console",
     "log",
@@ -41,14 +27,37 @@
     "command-line",
     "text"
   ],
-  "author": "Alex Sanders",
-  "license": "ISC",
+  "homepage": "https://github.com/sndrs/megalog",
+  "bugs": {
+    "url": "https://github.com/sndrs/megalog/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sndrs/megalog.git"
   },
-  "bugs": {
-    "url": "https://github.com/sndrs/megalog/issues"
+  "license": "ISC",
+  "author": "Alex Sanders",
+  "main": "./index.js",
+  "bin": "./cli.js",
+  "scripts": {
+    "prepare": "husky install",
+    "test": "node test/test.js"
   },
-  "homepage": "https://github.com/sndrs/megalog"
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write",
+    "package.json": "sort-package-json"
+  },
+  "prettier": "@guardian/prettier",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "lodash": "^3.8.0",
+    "window-size": "^1.1.1"
+  },
+  "devDependencies": {
+    "@guardian/prettier": "^0.7.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.4.1",
+    "sort-package-json": "^1.52.0"
+  }
 }
