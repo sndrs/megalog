@@ -1,7 +1,7 @@
 {
   "name": "megalog",
   "version": "1.0.0-beta",
-  "description": "Output messages to the console in big blocks; for when you really need something to be noticed.",
+  "description": "Log unmissable messages to the console; for when you really need to be noticed.",
   "keywords": [
     "console",
     "log",

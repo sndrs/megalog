@@ -3,8 +3,10 @@ import { createRequire } from 'module';
 import mri from 'mri';
 import { megalog } from './megalog.js';
 
+const require = createRequire(import.meta.url);
+
 const showHelp = () => {
-	console.log(`Output messages to the console in unmissable blocks.\n`);
+	console.log(`${require('../package.json').description}\n`);
 	showUsage();
 };
 
@@ -29,7 +31,6 @@ Examples
 };
 
 const showVersion = () => {
-	const require = createRequire(import.meta.url);
 	console.log(require('../package.json').version);
 };
 
