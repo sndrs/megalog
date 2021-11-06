@@ -15,7 +15,7 @@
     "warn",
     "error",
     "info",
-    "notifiy",
+    "notify",
     "notification",
     "cli",
     "ansi",
@@ -25,7 +25,8 @@
     "xterm",
     "logging",
     "command-line",
-    "text"
+    "text",
+    "markdown"
   ],
   "homepage": "https://github.com/sndrs/megalog",
   "bugs": {
