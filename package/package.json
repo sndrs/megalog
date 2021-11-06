@@ -1,6 +1,6 @@
 {
   "name": "megalog",
-  "version": "1.0.0-beta",
+  "version": "2.0.0-beta",
   "description": "Output messages to the console in big blocks; for when you really need something to be noticed.",
   "keywords": [
     "console",
@@ -38,14 +38,13 @@
   "license": "ISC",
   "author": "Alex Sanders",
   "type": "module",
-  "main": "src/megalog.js",
+  "main": "src/index.js",
   "bin": "src/cli.js",
   "files": [
     "src"
   ],
   "scripts": {
-    "prepare": "husky install",
-    "test": "node ./test/test.js"
+    "test": "node test/test.js"
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write",
@@ -54,11 +53,8 @@
   "prettier": "@guardian/prettier",
   "dependencies": {
     "chalk": "^4.1.2",
-    "marked": "^4.0.0",
-    "mri": "^1.2.0",
-    "strip-ansi": "^7.0.1",
-    "window-size": "^1.1.1",
-    "wrap-ansi": "^8.0.1"
+    "lodash": "^3.8.0",
+    "window-size": "^1.1.1"
   },
   "devDependencies": {
     "@guardian/prettier": "^0.7.0",
