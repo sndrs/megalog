@@ -72,8 +72,11 @@ codeExample.map(char =>
 
 - list item
 - list item with a lot of text that should be wrapped
-- [x] checked list item
-- [ ] unchecked list item
+- [x] checked task list item
+- [ ] unchecked task list item
+
+1. numbered list item
+2. second numbered list item
 
 Paragraph text has space after it.
 
