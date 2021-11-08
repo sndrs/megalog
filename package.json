@@ -45,6 +45,7 @@
     "src"
   ],
   "scripts": {
+    "lint": "eslint . --fix",
     "prepare": "husky install",
     "test": "node ./test/test.js"
   },
@@ -62,7 +63,9 @@
     "wrap-ansi": "^8.0.1"
   },
   "devDependencies": {
+    "@guardian/eslint-config": "^0.7.0",
     "@guardian/prettier": "^0.7.0",
+    "eslint": "7",
     "husky": ">=6",
     "lint-staged": ">=10",
     "prettier": "^2.4.1",

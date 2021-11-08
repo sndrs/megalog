@@ -1,5 +1,5 @@
-import { megalog } from '../src/megalog.js';
 import chalk from 'chalk';
+import { megalog } from '../src/megalog.js';
 
 megalog('default text on default background');
 megalog(

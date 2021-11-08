@@ -1,8 +1,8 @@
-import size from 'window-size';
-import wrapAnsi from 'wrap-ansi';
-import stripAnsi from 'strip-ansi';
 import chalk from 'chalk';
 import { marked } from 'marked';
+import stripAnsi from 'strip-ansi';
+import size from 'window-size';
+import wrapAnsi from 'wrap-ansi';
 
 const PADDING = 3;
 const MARGIN = 3;
