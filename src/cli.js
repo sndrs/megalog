@@ -15,10 +15,10 @@ const showUsage = () => {
   $ megalog <message> <options>
 
 Options
-  --info Use the info preset
-  --warn Use the warning preset
-  --error Use the error preset
-  --success Use the success preset
+  --info, -i Use the info preset
+  --warn, -w Use the warning preset
+  --error, -e Use the error preset
+  --success, -s Use the success preset
 
   --heading Set a custom heading
   --color Set a custom text color
@@ -27,7 +27,7 @@ Options
 
 Examples
   $ megalog "Something has gone wrong" --error
-  $ megalog "Something just happened" -h "FYI"`);
+  $ megalog "Something just happened" --heading "FYI"`);
 };
 
 const showVersion = () => {
