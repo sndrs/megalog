@@ -6,7 +6,7 @@ export const megalog = (
 		heading,
 		colour = 'black',
 		color = colour,
-		bgColour = 'white',
+		bgColour = 'bgWhite',
 		bgColor = bgColour,
 		codeColour = 'dim',
 		codeColor = codeColour,
@@ -18,7 +18,7 @@ export const megalog = (
 megalog.info = (message, { heading = 'info' } = {}) =>
 	megalog(message, {
 		heading,
-		bgColor: 'cyan',
+		bgColor: 'bgCyan',
 		color: 'black',
 		codeColor: 'dim',
 	});
@@ -26,7 +26,7 @@ megalog.info = (message, { heading = 'info' } = {}) =>
 megalog.warn = (message, { heading = 'warning' } = {}) =>
 	megalog(message, {
 		heading,
-		bgColor: 'yellow',
+		bgColor: 'bgYellow',
 		color: 'black',
 		codeColor: 'dim',
 	});
@@ -34,7 +34,7 @@ megalog.warn = (message, { heading = 'warning' } = {}) =>
 megalog.error = (message, { heading = 'error' } = {}) =>
 	megalog(message, {
 		heading,
-		bgColor: 'red',
+		bgColor: 'bgRed',
 		color: 'black',
 		codeColor: 'dim',
 	});
@@ -42,7 +42,7 @@ megalog.error = (message, { heading = 'error' } = {}) =>
 megalog.success = (message, { heading = 'success' } = {}) =>
 	megalog(message, {
 		heading,
-		bgColor: 'green',
+		bgColor: 'bgGreen',
 		color: 'black',
 		codeColor: 'dim',
 	});

@@ -8,16 +8,10 @@ const PADDING = 3;
 const MARGIN = 3;
 const WIDTH = Math.min(size.width - (PADDING + MARGIN) * 2, 60);
 
-const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
-
 export const formatMessage = (
 	message,
 	{ heading, color, bgColor, codeColor } = {},
 ) => {
-	const chalkColor = color;
-	const chalkBgColor = `bg${capitalize(bgColor)}`;
-	const chalkCodeColor = codeColor;
-
 	marked.use({
 		smartypants: true,
 		headerIds: false,
@@ -38,7 +32,7 @@ export const formatMessage = (
 				'▴'.repeat(WIDTH) +
 				'\n\n',
 
-			codespan: (text) => chalk[chalkCodeColor]('`' + text + '`'),
+			codespan: (text) => chalk[codeColor]('`' + text + '`'),
 			del: (text) => chalk.strikethrough(text),
 			em: (text) => chalk.italic(text),
 			heading: (text, level, raw, slugger) => {
@@ -83,7 +77,7 @@ export const formatMessage = (
 				line +
 				' '.repeat(WIDTH + PADDING - stripAnsi(line).length),
 		)
-		.map((line) => chalk[chalkBgColor][chalkColor](line))
+		.map((line) => chalk[bgColor][color](line))
 		.map((line) => ' '.repeat(MARGIN) + line + ' '.repeat(MARGIN))
 		.join('\n');
 
