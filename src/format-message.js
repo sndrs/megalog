@@ -24,7 +24,7 @@ export const formatMessage = (
 
 			br: () => '\n',
 			checkbox: (checked) => (checked ? '☒ ' : '☐ '),
-			code: (text, infostring, escaped) =>
+			code: (text) =>
 				'▾'.repeat(WIDTH) +
 				'\n' +
 				text.replace(/ /g, ' ') +
@@ -35,7 +35,7 @@ export const formatMessage = (
 			codespan: (text) => chalk[codeColor]('`' + text + '`'),
 			del: (text) => chalk.strikethrough(text),
 			em: (text) => chalk.italic(text),
-			heading: (text, level, raw, slugger) => {
+			heading: (text, level) => {
 				let heading = text.toUpperCase();
 				if (level === 1) {
 					heading = wrapAnsi(heading, WIDTH - 2)
@@ -51,12 +51,12 @@ export const formatMessage = (
 			html: (text) => text,
 			link: (href, title, text) =>
 				`${text} ${chalk.dim(`(${chalk.underline(href)})`)}`,
-			list: (text, ordered, start) => text + '\n',
-			listitem: (text, task, checked) => `• ${text}\n`,
+			list: (text) => text + '\n',
+			listitem: (text, task) => `${task ? '' : '• '}${text}\n`,
 			paragraph: (text) => text + '\n\n',
 			strong: (text) => chalk.bold(text),
 			table: (text, body) => text.toUpperCase() + body + '\n',
-			tablecell: (text, flags) => text + ' / ',
+			tablecell: (text) => text + ' / ',
 			tablerow: (text) => text.trim().replace(/\/$/g, '') + '\n',
 		},
 	});
