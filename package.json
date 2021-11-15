@@ -1,21 +1,7 @@
 {
   "name": "megalog",
-  "version": "0.1.0",
-  "description": "Output messages to the console in big blocks; for when you really need something to be noticed.",
-  "main": "megalog.js",
-  "dependencies": {
-    "chalk": "^1.0.0",
-    "lodash": "^3.8.0",
-    "window-size": "^0.1.0"
-  },
-  "devDependencies": {
-    "babel": "^5.2.17"
-  },
-  "scripts": {
-    "test": "node test/test.js",
-    "compile": "babel src/megalog.js --out-file megalog.js ",
-    "prepublish": "npm run compile"
-  },
+  "version": "1.0.0-beta",
+  "description": "Log unmissable messages to the console; for when you really need to be noticed.",
   "keywords": [
     "console",
     "log",
@@ -29,7 +15,7 @@
     "warn",
     "error",
     "info",
-    "notifiy",
+    "notify",
     "notification",
     "cli",
     "ansi",
@@ -39,16 +25,53 @@
     "xterm",
     "logging",
     "command-line",
-    "text"
+    "text",
+    "markdown"
   ],
-  "author": "Alex Sanders",
-  "license": "ISC",
+  "homepage": "https://github.com/sndrs/megalog",
+  "bugs": {
+    "url": "https://github.com/sndrs/megalog/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sndrs/megalog.git"
   },
-  "bugs": {
-    "url": "https://github.com/sndrs/megalog/issues"
+  "license": "ISC",
+  "author": "Alex Sanders",
+  "type": "module",
+  "main": "src/megalog.js",
+  "bin": "src/cli.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint . --fix",
+    "prepare": "husky install",
+    "test": "node ./test/test.js"
   },
-  "homepage": "https://github.com/sndrs/megalog"
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write",
+    "package.json": "sort-package-json"
+  },
+  "prettier": "@guardian/prettier",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "marked": "^4.0.0",
+    "mri": "^1.2.0",
+    "strip-ansi": "^7.0.1",
+    "window-size": "^1.1.1",
+    "wrap-ansi": "^8.0.1"
+  },
+  "devDependencies": {
+    "@guardian/eslint-config": "^0.7.0",
+    "@guardian/prettier": "^0.7.0",
+    "eslint": "7",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.4.1",
+    "sort-package-json": "^1.52.0"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  }
 }

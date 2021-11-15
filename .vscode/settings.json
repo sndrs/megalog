@@ -1,0 +1,16 @@
+{
+  "cSpell.words": [
+    "infostring",
+    "listitem",
+    "megalog",
+    "strikethrough",
+    "tablecell",
+    "tablerow"
+  ],
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
+}
